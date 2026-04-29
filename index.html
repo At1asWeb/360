@@ -65,17 +65,7 @@
                     <div class="hero-3d-layer layer-front"><img src="log.svg" alt=""></div>
                     <div class="hero-3d-glow"></div>
                 </div>
-                <div class="hero-3d-orbit">
-                    <span class="hero-3d-tag tag-1">DESIGN</span>
-                    <span class="hero-3d-tag tag-2">PRINT</span>
-                    <span class="hero-3d-tag tag-3">WEB</span>
-                    <span class="hero-3d-tag tag-4">OUTDOOR</span>
-                </div>
             </div>
-        </div>
-        <div class="hero-scroll-hint" aria-hidden="true">
-            <span>SCROLL</span>
-            <i></i>
         </div>
     </section>
 
@@ -298,13 +288,113 @@
         </div>
     </section>
 
-    <section id="steps" class="steps">
+    <section id="steps" class="steps-3d">
+        <div class="steps-bg" aria-hidden="true">
+            <span class="steps-grid"></span>
+            <span class="steps-orb steps-orb-1"></span>
+            <span class="steps-orb steps-orb-2"></span>
+        </div>
         <div class="container">
-            <h2 class="title-main">ЭТАПЫ</h2>
-            <div class="steps-wrapper">
-                <div class="step-line" data-aos="fade-right"><span class="step-num">01</span><div class="step-info"><h4>БРИФ</h4><p>Ставим цели и фиксируем задачи.</p></div></div>
-                <div class="step-line" data-aos="fade-right" data-aos-delay="200"><span class="step-num">02</span><div class="step-info"><h4>КРАФТ</h4><p>Производим конструкции и пишем код.</p></div></div>
-                <div class="step-line" data-aos="fade-right" data-aos-delay="400"><span class="step-num">03</span><div class="step-info"><h4>ПУСК</h4><p>Монтируем и передаем готовый проект.</p></div></div>
+            <div class="steps-head">
+                <span class="steps-kicker">// как мы работаем</span>
+                <h2 class="steps-title">ЭТАПЫ <span class="accent">.</span></h2>
+                <p class="steps-sub">От первого брифа до сданного объекта — прозрачный процесс без сюрпризов. Каждый этап подсвечен сроком, артефактами и ответственными.</p>
+            </div>
+
+            <div class="steps-track" role="list">
+                <div class="steps-track-line" aria-hidden="true">
+                    <span class="steps-track-progress"></span>
+                </div>
+
+                <article class="step-card" role="listitem" data-step="01" data-aos="fade-up">
+                    <div class="step-card-inner">
+                        <div class="step-card-top">
+                            <span class="step-num">01</span>
+                            <span class="step-dot" aria-hidden="true"></span>
+                        </div>
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="9" y1="13" x2="15" y2="13"/>
+                                <line x1="9" y1="17" x2="13" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">БРИФ</h3>
+                        <p class="step-desc">Слушаем задачу, фиксируем цели, KPI и ограничения. Согласовываем смету и сроки.</p>
+                        <ul class="step-meta">
+                            <li><span>Срок</span><b>1–3 дня</b></li>
+                            <li><span>Артефакт</span><b>ТЗ + смета</b></li>
+                        </ul>
+                    </div>
+                    <span class="step-glow" aria-hidden="true"></span>
+                </article>
+
+                <article class="step-card" role="listitem" data-step="02" data-aos="fade-up" data-aos-delay="120">
+                    <div class="step-card-inner">
+                        <div class="step-card-top">
+                            <span class="step-num">02</span>
+                            <span class="step-dot" aria-hidden="true"></span>
+                        </div>
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">КРАФТ</h3>
+                        <p class="step-desc">Дизайн, инженерка, цех и код. Промежуточные демо и согласования по этапам, без долгих «чёрных коробок».</p>
+                        <ul class="step-meta">
+                            <li><span>Срок</span><b>2–6 недель</b></li>
+                            <li><span>Артефакт</span><b>Дизайн + сборка</b></li>
+                        </ul>
+                    </div>
+                    <span class="step-glow" aria-hidden="true"></span>
+                </article>
+
+                <article class="step-card" role="listitem" data-step="03" data-aos="fade-up" data-aos-delay="240">
+                    <div class="step-card-inner">
+                        <div class="step-card-top">
+                            <span class="step-num">03</span>
+                            <span class="step-dot" aria-hidden="true"></span>
+                        </div>
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 19a4 4 0 1 1 8 0"/>
+                                <path d="M9 14V3l4 4-4 4"/>
+                                <path d="M21 21H3"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">ПУСК</h3>
+                        <p class="step-desc">Монтаж, релиз, обучение. Сдаём проект под ключ с полным пакетом документов и гарантией.</p>
+                        <ul class="step-meta">
+                            <li><span>Срок</span><b>1–7 дней</b></li>
+                            <li><span>Артефакт</span><b>Сдача + гарантия</b></li>
+                        </ul>
+                    </div>
+                    <span class="step-glow" aria-hidden="true"></span>
+                </article>
+
+                <article class="step-card" role="listitem" data-step="04" data-aos="fade-up" data-aos-delay="360">
+                    <div class="step-card-inner">
+                        <div class="step-card-top">
+                            <span class="step-num">04</span>
+                            <span class="step-dot" aria-hidden="true"></span>
+                        </div>
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12a9 9 0 1 1-6.2-8.55"/>
+                                <polyline points="21 4 21 10 15 10"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">СОПРОВОЖДЕНИЕ</h3>
+                        <p class="step-desc">Дорабатываем, расширяем и поддерживаем. Один менеджер, прозрачный отчёт, фиксированная стоимость часа.</p>
+                        <ul class="step-meta">
+                            <li><span>Срок</span><b>от 1 мес</b></li>
+                            <li><span>Артефакт</span><b>SLA + апдейты</b></li>
+                        </ul>
+                    </div>
+                    <span class="step-glow" aria-hidden="true"></span>
+                </article>
             </div>
         </div>
     </section>
@@ -554,6 +644,26 @@
                 }
 
                 schedule();
+            }
+
+            // ===== STEPS: trigger connector progress line when in view =====
+            const stepsSection = document.querySelector('.steps-3d');
+            if (stepsSection) {
+                if (reduceMotion) {
+                    stepsSection.classList.add('in-view');
+                } else if ('IntersectionObserver' in window) {
+                    const stepsObserver = new IntersectionObserver((entries, obs) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                stepsSection.classList.add('in-view');
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.25 });
+                    stepsObserver.observe(stepsSection);
+                } else {
+                    stepsSection.classList.add('in-view');
+                }
             }
         });
     </script>
