@@ -422,7 +422,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({ duration: 800, once: true });
+            const __isNarrow = window.matchMedia('(max-width: 768px)').matches;
+            const __reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            AOS.init({
+                duration: __reduce ? 0 : (__isNarrow ? 500 : 800),
+                once: true,
+                offset: __isNarrow ? 60 : 120,
+                disable: __reduce
+            });
 
             new Swiper('.portfolioSwiper', {
                 loop: true,
@@ -507,20 +514,24 @@
 
             // ===== HERO 3D LOGO: scroll-driven rotation + pointer parallax =====
             const hero3d = document.getElementById('hero3d');
+            const isNarrowHero = window.matchMedia('(max-width: 768px)').matches;
             if (hero3d && !reduceMotion) {
                 const stage = hero3d.querySelector('.hero-3d-stage');
                 let scrollY = window.scrollY || 0;
                 let pointerX = 0;
                 let pointerY = 0;
                 let frame = null;
+                // Lighter motion on mobile/tablet (perf + reduced visual noise)
+                const spinFactor = isNarrowHero ? 0.08 : 0.18;
+                const tiltXFactor = isNarrowHero ? 0 : 8;
+                const tiltYFactor = isNarrowHero ? 0 : 12;
+                const liftCap = isNarrowHero ? 30 : 80;
 
                 const apply = () => {
-                    // base spin from scroll: 0.18deg per pixel scrolled
-                    const spin = scrollY * 0.18;
-                    // gentle tilt from pointer position relative to viewport center
-                    const tiltX = pointerY * 8;
-                    const tiltY = pointerX * 12 + spin;
-                    const lift = Math.min(scrollY * 0.05, 80);
+                    const spin = scrollY * spinFactor;
+                    const tiltX = pointerY * tiltXFactor;
+                    const tiltY = pointerX * tiltYFactor + spin;
+                    const lift = Math.min(scrollY * 0.05, liftCap);
                     stage.style.transform = `translateY(${-lift}px) rotateX(${-tiltX}deg) rotateY(${tiltY}deg)`;
                     frame = null;
                 };
@@ -534,11 +545,13 @@
                     schedule();
                 }, { passive: true });
 
-                window.addEventListener('mousemove', (e) => {
-                    pointerX = (e.clientX / window.innerWidth) - 0.5;
-                    pointerY = (e.clientY / window.innerHeight) - 0.5;
-                    schedule();
-                });
+                if (!isNarrowHero) {
+                    window.addEventListener('mousemove', (e) => {
+                        pointerX = (e.clientX / window.innerWidth) - 0.5;
+                        pointerY = (e.clientY / window.innerHeight) - 0.5;
+                        schedule();
+                    });
+                }
 
                 schedule();
             }

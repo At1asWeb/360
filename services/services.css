@@ -566,13 +566,83 @@
     .svc-tile.t2, .svc-tile.t3 { grid-column: span 6; }
     .svc-tile.t4, .svc-tile.t5 { grid-column: span 6; }
     .svc-section { padding: 70px 0; }
+    /* Calmer 3D stack on tablet — less rotation, no float drift */
+    .svc-stack { transform: rotateY(-12deg) rotateX(4deg); animation-duration: 12s; }
+    .svc-stack-card.l1 { transform: translateZ(-40px) translateX(-30px) translateY(24px); }
+    .svc-stack-card.l2 { transform: translateZ(-20px) translateX(-15px) translateY(12px); }
+    .svc-stack-card .digit { font-size: 180px; }
+}
+
+@media (max-width: 768px) {
+    .svc-hero { padding: 120px 5% 60px; }
+    .svc-hero-visual { height: 300px; }
+    .svc-stack-card .glyph { width: 44%; }
+    .svc-stack-card .digit { font-size: 150px; }
+    .svc-stack-card .label { top: 18px; left: 18px; font-size: 9px; letter-spacing: 3px; }
+    .svc-section-head { margin-bottom: 40px; }
+    .svc-section-head h2 { font-size: clamp(24px, 6vw, 36px); }
+    .svc-cta-row { flex-direction: column; align-items: stretch; }
+    .svc-btn { justify-content: center; }
 }
 
 @media (max-width: 600px) {
-    .svc-hero h1 { font-size: 38px; }
-    .svc-hero-visual { height: 300px; }
-    .svc-features { grid-template-columns: 1fr; }
-    .svc-process { grid-template-columns: 1fr; }
-    .svc-cta { padding: 48px 22px; }
-    .svc-stack-card .digit { font-size: 140px; }
+    .svc-hero { padding: 100px 5% 50px; }
+    .svc-hero h1 { font-size: clamp(34px, 9vw, 44px); line-height: 1.0; margin-bottom: 18px; }
+    .svc-hero p.lead { font-size: 15px; line-height: 1.55; margin-bottom: 28px; }
+    .svc-hero-visual { height: 260px; }
+    .svc-breadcrumb { font-size: 9px; letter-spacing: 2.5px; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; }
+    .svc-hero-tag { font-size: 9px; letter-spacing: 3px; padding: 6px 12px; margin-bottom: 16px; }
+    .svc-features { grid-template-columns: 1fr; gap: 14px; }
+    .svc-feature { padding: 24px 22px; }
+    .svc-feature h3 { font-size: 16px; }
+    .svc-feature p { font-size: 13px; }
+    .svc-process { grid-template-columns: 1fr; gap: 14px; }
+    .svc-step { padding: 22px; }
+    .svc-step h4 { font-size: 18px; }
+    .svc-cta { padding: 44px 22px; }
+    .svc-cta h2 { font-size: clamp(24px, 7.5vw, 34px); line-height: 1.05; }
+    .svc-cta p { font-size: 14px; }
+    .svc-facts { gap: 14px; }
+    .svc-fact { padding: 22px 14px; }
+    .svc-fact b { font-size: clamp(28px, 8vw, 40px); }
+    .svc-stack { transform: rotateY(-8deg) rotateX(3deg); }
+    .svc-stack-card.l1 { transform: translateZ(-30px) translateX(-18px) translateY(14px); }
+    .svc-stack-card.l2 { transform: translateZ(-15px) translateX(-9px) translateY(7px); }
+    .svc-stack-card .digit { font-size: 120px; right: 10px; bottom: -14px; }
+    .svc-stack-card .label { top: 14px; left: 14px; font-size: 8px; }
+    .svc-stack-card .corner { width: 18px; height: 18px; }
+    /* Gallery: keep 2-col layout but make t1 narrower */
+    .svc-tile.t1 { grid-column: span 12; }
+    .svc-tile.t2, .svc-tile.t3,
+    .svc-tile.t4, .svc-tile.t5 { grid-column: span 6; }
+    .svc-tile { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 420px) {
+    .svc-hero { padding: 90px 5% 44px; }
+    .svc-hero h1 { font-size: 30px; }
+    .svc-hero-visual { height: 220px; }
+    .svc-stack-card .digit { font-size: 96px; }
+    .svc-stack-card .glyph { width: 50%; max-width: 130px; }
+    /* Gallery on very small: full-width tiles for legibility */
+    .svc-tile.t1, .svc-tile.t2, .svc-tile.t3,
+    .svc-tile.t4, .svc-tile.t5 { grid-column: span 12; }
+    .svc-tile { aspect-ratio: 16 / 10; }
+}
+
+/* Touch / hover-less devices: kill 3D tilt, settle the float */
+@media (hover: none) {
+    .svc-stack { animation: none; transform: rotateY(-10deg) rotateX(4deg); }
+    .svc-feature { transform: none !important; }
+    .svc-feature:hover { transform: none; }
+}
+
+/* Reduced motion: full stop on animations on these pages */
+@media (prefers-reduced-motion: reduce) {
+    .svc-stack,
+    .svc-stack-card,
+    .svc-feature,
+    .svc-fact b,
+    .svc-cta::before { animation: none !important; }
+    .svc-stack { transform: none; }
 }

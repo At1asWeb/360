@@ -1446,8 +1446,9 @@ body {
         opacity: 0.32;
         z-index: 0;
     }
-    .hero-content { z-index: 2; }
+    .hero-content { z-index: 2; position: relative; }
     .hero-3d-stage { width: min(440px, 78vw); }
+    .hero-3d-orbit { display: none; }
 
     .hero-overlay {
         background:
@@ -1508,8 +1509,17 @@ body {
     .nav-links a { font-size: 20px; margin: 15px 0; }
 
     .services-grid { grid-template-columns: 1fr; }
-    .services-grid-3d { grid-template-columns: 1fr; gap: 20px; }
-    .s-card-3d { height: auto; min-height: 280px; }
+    /* Keep Arsenal as 2 columns on small tablets — drop to 1 column only below 640px */
+    .s-card-icon { width: 48px; height: 48px; padding: 10px; }
+
+    /* Hero 3D simplification on tablet/mobile — drop visual noise so text reads first */
+    .hero-3d { opacity: 0.22; }
+    .hero-3d-rings .r2,
+    .hero-3d-rings .r3 { display: none; }
+    .hero-3d-glow { opacity: 0.5; }
+    .hero-3d-stage { width: min(360px, 76vw); }
+    .hero h1 { font-size: clamp(40px, 13vw, 80px); }
+    .hero-scroll-hint { bottom: 18px; }
     
     .form-wrapper { 
         clip-path: none;
@@ -1602,9 +1612,28 @@ body {
     }
 }
 
+@media (max-width: 640px) {
+    .services-grid-3d { grid-template-columns: 1fr; gap: 18px; }
+    .s-card-3d { height: auto; min-height: 260px; }
+    .s-card-index { font-size: 110px; right: 14px; bottom: -14px; }
+    .s-card-body h3 { font-size: 18px; }
+    .s-card-body p { font-size: 13px; }
+}
+
 @media (max-width: 480px) {
-    .hero h1 { font-size: 42px; }
+    .hero h1 { font-size: 38px; line-height: 1.05; }
+    .hero p { font-size: 14px; }
     .stats { flex-direction: column; gap: 20px; }
+
+    /* Tighter Arsenal cards on small mobile */
+    .s-card-3d { min-height: 240px; border-radius: 14px; }
+    .s-card-inner { padding: 22px 20px 20px; }
+    .s-card-index { font-size: 92px; bottom: -10px; right: 10px; opacity: 0.55; }
+    .s-card-cta span { font-size: 11px; letter-spacing: 2.5px; }
+
+    /* Pull hero 3D logo back further on small screens */
+    .hero-3d { opacity: 0.16; }
+    .hero-3d-stage { width: min(280px, 70vw); }
 
     .form-wrapper {
         padding: 22px 14px 20px;
