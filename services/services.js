@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    if (window.AOS) AOS.init({ duration: 800, once: true });
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    const isNarrow = window.matchMedia('(max-width: 768px)').matches;
+
+    if (window.AOS) {
+        AOS.init({
+            duration: reduce ? 0 : (isNarrow ? 500 : 800),
+            once: true,
+            disable: reduce ? true : (isNarrow ? function () { return false; } : false),
+            offset: isNarrow ? 60 : 120,
+        });
+    }
 
     const menuBtn = document.getElementById('mobile-menu');
     const nav = document.querySelector('.nav-links');
@@ -15,9 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isTouch = window.matchMedia('(hover: none)').matches;
 
     // Pointer-driven 3D parallax for service hero stack
     const stack = document.querySelector('.svc-stack');
