@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 | Production Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="preloader" id="preloader">
+    <div class="loader-bg">
+        <div class="shutter top"></div>
+        <div class="shutter bottom"></div>
+    </div>
+    <div class="loader-core">
+        <div class="scan-ring"></div>
+        <div class="scan-ring inner"></div>
+        <div class="glitch-wrapper">
+            <div class="glitch-num" id="load-pct" data-text="0">0</div>
+            <div class="glitch-unit">°</div>
+        </div>
+        <div class="status-text">ЯРКО, ОСТРО, ЭФФЕКТНО</div>
+    </div>
+</div>
+
+    <header class="navbar">
+        <a href="#" class="logo" aria-label="360 Production Group">
+            <img src="log.svg" alt="360 Production Group">
+        </a>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="#about">О нас</a>
+            <a href="#portfolio">Кейсы</a>
+            <a href="#services">Арсенал</a>
+            <a href="#steps">Этапы</a>
+            <a href="#contact" class="btn-red-nav">Связь</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content" data-aos="fade-right">
+            <h1>360<span>°</span><br><span class="red-text">СТУДИЯ РЕКЛАМЫ</span></h1>
+            <p>Закрываем задачи бренда на 360°. Производство, дизайн и digital в одной экосистеме.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-title" data-aos="fade-up">
+                    <h2>КТО ТАКИЕ <span class="outline">360<span>°</span></span></h2>
+                </div>
+                <div class="about-text" data-aos="fade-up">
+                    <p>Мы объединили под одной крышей цех наружной рекламы, типографию и отдел разработки сайтов. Наш стиль - это дерзость, подкрепленная собственным производством.</p>
+                    <div class="stats">
+                        <div class="stat-item"><b>100%</b><span>Качество</span></div>
+                        <div class="stat-item"><b>360°</b><span>Подход</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-label centered">НАШИ ПРОЕКТЫ</h2>
+        </div>
+        <div class="slider-wrapper">
+            <div class="swiper portfolioSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <img src="test1.jpg" alt="Outdoor">
+                            <div class="slide-desc">OUTDOOR</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <img src="test2.jpeg" alt="Web">
+                            <div class="slide-desc">WEB DEV</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <img src="test3.jpeg" alt="Print">
+                            <div class="slide-desc">PRINT</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <img src="test1.JPG" alt="Outdoor">
+                            <div class="slide-desc">OUTDOOR</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <img src="test2.jpeg" alt="Web">
+                            <div class="slide-desc">WEB DEV</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <img src="test3.jpeg" alt="Print">
+                            <div class="slide-desc">PRINT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next custom-nav"></div>
+            <div class="swiper-button-prev custom-nav"></div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="title-main" data-aos="fade-down">АРСЕНАЛ</h2>
+            <div class="services-grid">
+                <div class="s-card" data-aos="fade-up">
+                    <h3>НАРУЖНАЯ РЕКЛАМА</h3>
+                    <p>Световые вывески, неон, буквы и лайтбоксы. Собственный цех сборки.</p>
+                </div>
+                <div class="s-card" data-aos="fade-up">
+                    <h3>РАЗРАБОТКА САЙТОВ</h3>
+                    <p>Landing Page, корпоративные сайты и сложные веб-сервисы с полным адаптивом.</p>
+                </div>
+                <div class="s-card" data-aos="fade-up">
+                    <h3>ПЕЧАТЬ</h3>
+                    <p>Широкоформатная и УФ-печать на любых поверхностях. Высокая четкость.</p>
+                </div>
+                <div class="s-card" data-aos="fade-up">
+                    <h3>ПОЛИГРАФИЯ</h3>
+                    <p>Визитки, меню, флаеры и наклейки в промышленных масштабах.</p>
+                </div>
+                <div class="s-card" data-aos="fade-up">
+                    <h3>СУВЕНИРЫ</h3>
+                    <p>Брендированный мерч, одежда и подарки для вашего бизнеса.</p>
+                </div>
+                <div class="s-card" data-aos="fade-up">
+                    <h3>ДИЗАЙН</h3>
+                    <p>Логотипы, фирменный стиль и визуальные стратегии для брендов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="steps">
+        <div class="container">
+            <h2 class="title-main">ЭТАПЫ</h2>
+            <div class="steps-wrapper">
+                <div class="step-line" data-aos="fade-right"><span class="step-num">01</span><div class="step-info"><h4>БРИФ</h4><p>Ставим цели и фиксируем задачи.</p></div></div>
+                <div class="step-line" data-aos="fade-right" data-aos-delay="200"><span class="step-num">02</span><div class="step-info"><h4>КРАФТ</h4><p>Производим конструкции и пишем код.</p></div></div>
+                <div class="step-line" data-aos="fade-right" data-aos-delay="400"><span class="step-num">03</span><div class="step-info"><h4>ПУСК</h4><p>Монтируем и передаем готовый проект.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-label centered">ОТЗЫВЫ</h2>
+        </div>
+        <div class="reviews-wrapper">
+            <div class="reviews-track">
+                <div class="review-card"><span>"Лучшая наружка в городе. 360 - это уровень!"</span><strong>— Артем М.</strong></div>
+                <div class="review-card"><span>"Сделали сайт за неделю. Адаптив летает."</span><strong>— Елена К.</strong></div>
+                <div class="review-card"><span>"Качество печати на высоте, цвета сочные."</span><strong>— Игорь В.</strong></div>
+                <div class="review-card"><span>"Заказывали мерч для команды, все в восторге."</span><strong>— Анна С.</strong></div>
+                <div class="review-card"><span>"Профессиональный подход к дизайну логотипа."</span><strong>— Олег Д.</strong></div>
+                <div class="review-card"><span>"Монтаж вывески прошел чисто и быстро."</span><strong>— Дмитрий Л.</strong></div>
+                <div class="review-card"><span>"Типография, которой можно доверять на 100%."</span><strong>— Мария П.</strong></div>
+                <div class="review-card"><span>"Техподдержка сайта всегда на связи. Рекомендую."</span><strong>— Павел Г.</strong></div>
+                <div class="review-card"><span>"Креатив превзошел все ожидания. Топ!"</span><strong>— Ксения А.</strong></div>
+                <div class="review-card"><span>"Закрыли все задачи бренда под ключ. Спасибо!"</span><strong>— Виктор Р.</strong></div>
+                <div class="review-card"><span>"Лучшая наружка в городе. 360 - это уровень!"</span><strong>— Артем М.</strong></div>
+                <div class="review-card"><span>"Сделали сайт за неделю. Адаптив летает."</span><strong>— Елена К.</strong></div>
+                <div class="review-card"><span>"Качество печати на высоте, цвета сочные."</span><strong>— Игорь В.</strong></div>
+                <div class="review-card"><span>"Заказывали мерч для команды, все в восторге."</span><strong>— Анна С.</strong></div>
+                <div class="review-card"><span>"Профессиональный подход к дизайну логотипа."</span><strong>— Олег Д.</strong></div>
+                <div class="review-card"><span>"Монтаж вывески прошел чисто и быстро."</span><strong>— Дмитрий Л.</strong></div>
+                <div class="review-card"><span>"Типография, которой можно доверять на 100%."</span><strong>— Мария П.</strong></div>
+                <div class="review-card"><span>"Техподдержка сайта всегда на связи. Рекомендую."</span><strong>— Павел Г.</strong></div>
+                <div class="review-card"><span>"Креатив превзошел все ожидания. Топ!"</span><strong>— Ксения А.</strong></div>
+                <div class="review-card"><span>"Закрыли все задачи бренда под ключ. Спасибо!"</span><strong>— Виктор Р.</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="form-wrapper" data-aos="zoom-in">
+                <div class="contact-header">
+                    <h2>ГОТОВЫ К <span>360°?</span></h2>
+                    <p>Оставьте контакты, а мы вернемся с идеей, сметой и первым вектором по вашему проекту.</p>
+                </div>
+                <div class="contact-showcase">
+                    <div class="signal-stage" aria-hidden="true">
+                        <div class="signal-core">
+                            <span class="signal-pulse pulse-1"></span>
+                            <span class="signal-pulse pulse-2"></span>
+                            <span class="signal-pulse pulse-3"></span>
+                            <div class="signal-center">
+                                <span>360°</span>
+                            </div>
+                            <div class="signal-orbit orbit-1">
+                                <span class="orbit-node">EMAIL</span>
+                            </div>
+                            <div class="signal-orbit orbit-2">
+                                <span class="orbit-node">MAX</span>
+                            </div>
+                            <div class="signal-orbit orbit-3">
+                                <span class="orbit-node">TELEGRAM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-grid">
+                        <label class="field-shell">
+                            <input type="text" name="name" placeholder=" " required>
+                            <span class="field-label">Имя</span>
+                            <span class="field-glow"></span>
+                        </label>
+                        <label class="field-shell">
+                            <input type="tel" name="phone" placeholder=" " required>
+                            <span class="field-label">Телефон</span>
+                            <span class="field-glow"></span>
+                        </label>
+                        <label class="field-shell">
+                            <input type="email" name="email" placeholder=" " required>
+                            <span class="field-label">Почта</span>
+                            <span class="field-glow"></span>
+                        </label>
+                        <label class="field-shell">
+                            <input type="text" name="telegram" placeholder=" ">
+                            <span class="field-label">Telegram </span>
+                            <span class="field-glow"></span>
+                        </label>
+                        <label class="field-shell">
+                            <input type="text" name="max" placeholder=" ">
+                            <span class="field-label">MAX </span>
+                            <span class="field-glow"></span>
+                        </label>
+                        <label class="field-shell field-shell-wide">
+                            <input type="text" name="project" placeholder=" ">
+                            <span class="field-label">Что нужно сделать?</span>
+                            <span class="field-glow"></span>
+                        </label>
+                    </div>
+                    <label class="consent-check">
+                        <input type="checkbox" name="consent" required>
+                        <span class="consent-box"></span>
+                        <span class="consent-text">Согласен на обработку данных и ответ в удобном канале связи</span>
+                    </label>
+                    <button type="submit" class="btn-submit">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo">360<span>°</span></div>
+            <p>© 2026 360 Production. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({ duration: 800, once: true });
+
+            new Swiper('.portfolioSwiper', {
+                loop: true,
+                centeredSlides: false,
+                watchOverflow: true,
+                slidesPerView: 1,
+                spaceBetween: 16,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 30 }
+                }
+            });
+
+            const menuBtn = document.getElementById('mobile-menu');
+            const nav = document.querySelector('.nav-links');
+
+            menuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                menuBtn.classList.toggle('open');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    menuBtn.classList.remove('open');
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pctDisplay = document.getElementById('load-pct');
+            const preloader = document.getElementById('preloader');
+
+            if (!pctDisplay || !preloader) return;
+
+            const target = 360;
+            const duration = 700;
+            const stepTime = 16;
+            const increment = target / (duration / stepTime);
+            let count = 0;
+            let isFinished = false;
+
+            const finishPreloader = () => {
+                if (isFinished) return;
+                isFinished = true;
+                clearInterval(counter);
+                preloader.classList.add('loaded');
+                document.body.style.overflow = 'visible';
+            };
+
+            const counter = setInterval(() => {
+                count += increment;
+                let current = Math.floor(count);
+
+                if (current >= target) {
+                    current = target;
+                    pctDisplay.innerText = current;
+                    pctDisplay.setAttribute('data-text', current);
+                    setTimeout(finishPreloader, 120);
+                    return;
+                }
+
+                pctDisplay.innerText = current;
+                pctDisplay.setAttribute('data-text', current);
+            }, stepTime);
+
+            setTimeout(finishPreloader, 1200);
+        });
+    </script>
+</body>
+</html>
