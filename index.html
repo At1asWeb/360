@@ -52,6 +52,31 @@
             <h1>360<span>°</span><br><span class="red-text">СТУДИЯ РЕКЛАМЫ</span></h1>
             <p>Закрываем задачи бренда на 360°. Производство, дизайн и digital в одной экосистеме.</p>
         </div>
+        <div class="hero-3d" id="hero3d" aria-hidden="true">
+            <div class="hero-3d-stage">
+                <div class="hero-3d-rings">
+                    <span class="hero-3d-ring r1"></span>
+                    <span class="hero-3d-ring r2"></span>
+                    <span class="hero-3d-ring r3"></span>
+                </div>
+                <div class="hero-3d-emblem">
+                    <div class="hero-3d-layer layer-back"><img src="log.svg" alt=""></div>
+                    <div class="hero-3d-layer layer-mid"><img src="log.svg" alt=""></div>
+                    <div class="hero-3d-layer layer-front"><img src="log.svg" alt=""></div>
+                    <div class="hero-3d-glow"></div>
+                </div>
+                <div class="hero-3d-orbit">
+                    <span class="hero-3d-tag tag-1">DESIGN</span>
+                    <span class="hero-3d-tag tag-2">PRINT</span>
+                    <span class="hero-3d-tag tag-3">WEB</span>
+                    <span class="hero-3d-tag tag-4">OUTDOOR</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span>SCROLL</span>
+            <i></i>
+        </div>
     </section>
 
     <section id="about" class="about">
@@ -124,31 +149,151 @@
     <section id="services" class="services">
         <div class="container">
             <h2 class="title-main" data-aos="fade-down">АРСЕНАЛ</h2>
-            <div class="services-grid">
-                <div class="s-card" data-aos="fade-up">
-                    <h3>НАРУЖНАЯ РЕКЛАМА</h3>
-                    <p>Световые вывески, неон, буквы и лайтбоксы. Собственный цех сборки.</p>
-                </div>
-                <div class="s-card" data-aos="fade-up">
-                    <h3>РАЗРАБОТКА САЙТОВ</h3>
-                    <p>Landing Page, корпоративные сайты и сложные веб-сервисы с полным адаптивом.</p>
-                </div>
-                <div class="s-card" data-aos="fade-up">
-                    <h3>ПЕЧАТЬ</h3>
-                    <p>Широкоформатная и УФ-печать на любых поверхностях. Высокая четкость.</p>
-                </div>
-                <div class="s-card" data-aos="fade-up">
-                    <h3>ПОЛИГРАФИЯ</h3>
-                    <p>Визитки, меню, флаеры и наклейки в промышленных масштабах.</p>
-                </div>
-                <div class="s-card" data-aos="fade-up">
-                    <h3>СУВЕНИРЫ</h3>
-                    <p>Брендированный мерч, одежда и подарки для вашего бизнеса.</p>
-                </div>
-                <div class="s-card" data-aos="fade-up">
-                    <h3>ДИЗАЙН</h3>
-                    <p>Логотипы, фирменный стиль и визуальные стратегии для брендов.</p>
-                </div>
+            <p class="services-lede" data-aos="fade-up">Шесть направлений — один цех. Наведи курсор и проникни в каждый блок арсенала.</p>
+            <div class="services-grid services-grid-3d" id="arsenalGrid">
+                <a class="s-card s-card-3d" data-aos="fade-up" href="services/outdoor.html" data-accent="#ff2b2b">
+                    <span class="s-card-inner">
+                        <span class="s-card-glow"></span>
+                        <span class="s-card-grid"></span>
+                        <span class="s-card-index">01</span>
+                        <span class="s-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <rect x="6" y="14" width="52" height="28" rx="2"/>
+                                <path d="M6 22h52M14 14v28M50 14v28"/>
+                                <path d="M22 50h20M32 42v8" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="s-card-body">
+                            <span class="s-card-tag">01 / OUTDOOR</span>
+                            <h3>НАРУЖНАЯ РЕКЛАМА</h3>
+                            <p>Световые вывески, неон, объёмные буквы и лайтбоксы. Собственный цех сборки и монтаж под ключ.</p>
+                        </span>
+                        <span class="s-card-cta">
+                            <span>СМОТРЕТЬ</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="s-card-shine"></span>
+                    </span>
+                </a>
+                <a class="s-card s-card-3d" data-aos="fade-up" data-aos-delay="80" href="services/web.html" data-accent="#ff3344">
+                    <span class="s-card-inner">
+                        <span class="s-card-glow"></span>
+                        <span class="s-card-grid"></span>
+                        <span class="s-card-index">02</span>
+                        <span class="s-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <rect x="6" y="10" width="52" height="38" rx="3"/>
+                                <path d="M6 20h52"/>
+                                <path d="M22 32l-6 6 6 6M42 32l6 6-6 6M36 28l-8 16" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="s-card-body">
+                            <span class="s-card-tag">02 / WEB</span>
+                            <h3>РАЗРАБОТКА САЙТОВ</h3>
+                            <p>Landing Page, корпоративные сайты и сложные веб-сервисы с полной адаптацией под все устройства.</p>
+                        </span>
+                        <span class="s-card-cta">
+                            <span>СМОТРЕТЬ</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="s-card-shine"></span>
+                    </span>
+                </a>
+                <a class="s-card s-card-3d" data-aos="fade-up" data-aos-delay="160" href="services/print.html" data-accent="#ff4747">
+                    <span class="s-card-inner">
+                        <span class="s-card-glow"></span>
+                        <span class="s-card-grid"></span>
+                        <span class="s-card-index">03</span>
+                        <span class="s-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M14 22V8h36v14"/>
+                                <rect x="6" y="22" width="52" height="22" rx="2"/>
+                                <rect x="14" y="38" width="36" height="18"/>
+                                <circle cx="50" cy="30" r="2.2" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </span>
+                        <span class="s-card-body">
+                            <span class="s-card-tag">03 / PRINT</span>
+                            <h3>ПЕЧАТЬ</h3>
+                            <p>Широкоформатная и УФ-печать на любых поверхностях. Точные цвета и высокая чёткость до 1440 dpi.</p>
+                        </span>
+                        <span class="s-card-cta">
+                            <span>СМОТРЕТЬ</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="s-card-shine"></span>
+                    </span>
+                </a>
+                <a class="s-card s-card-3d" data-aos="fade-up" data-aos-delay="240" href="services/poligrafiya.html" data-accent="#ff2b6b">
+                    <span class="s-card-inner">
+                        <span class="s-card-glow"></span>
+                        <span class="s-card-grid"></span>
+                        <span class="s-card-index">04</span>
+                        <span class="s-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 8h28l12 12v36H12z"/>
+                                <path d="M40 8v12h12"/>
+                                <path d="M20 30h24M20 38h24M20 46h16" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="s-card-body">
+                            <span class="s-card-tag">04 / POLY</span>
+                            <h3>ПОЛИГРАФИЯ</h3>
+                            <p>Визитки, меню, флаеры и наклейки в промышленных масштабах. Тиснение, фольга, лак и крой.</p>
+                        </span>
+                        <span class="s-card-cta">
+                            <span>СМОТРЕТЬ</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="s-card-shine"></span>
+                    </span>
+                </a>
+                <a class="s-card s-card-3d" data-aos="fade-up" data-aos-delay="320" href="services/merch.html" data-accent="#ff5151">
+                    <span class="s-card-inner">
+                        <span class="s-card-glow"></span>
+                        <span class="s-card-grid"></span>
+                        <span class="s-card-index">05</span>
+                        <span class="s-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M20 12l-12 8 6 10 6-3v25h32V27l6 3 6-10-12-8-8 4h-16z" stroke-linejoin="round"/>
+                                <path d="M28 12c0 2.5 1.8 5 4 5s4-2.5 4-5"/>
+                            </svg>
+                        </span>
+                        <span class="s-card-body">
+                            <span class="s-card-tag">05 / MERCH</span>
+                            <h3>СУВЕНИРЫ</h3>
+                            <p>Брендированный мерч, корпоративная одежда и подарки. От футболок до металлических термокружек.</p>
+                        </span>
+                        <span class="s-card-cta">
+                            <span>СМОТРЕТЬ</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="s-card-shine"></span>
+                    </span>
+                </a>
+                <a class="s-card s-card-3d" data-aos="fade-up" data-aos-delay="400" href="services/design.html" data-accent="#ff1f1f">
+                    <span class="s-card-inner">
+                        <span class="s-card-glow"></span>
+                        <span class="s-card-grid"></span>
+                        <span class="s-card-index">06</span>
+                        <span class="s-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M44 8l12 12-32 32H12V40z" stroke-linejoin="round"/>
+                                <path d="M38 14l12 12M12 56h40" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="s-card-body">
+                            <span class="s-card-tag">06 / DESIGN</span>
+                            <h3>ДИЗАЙН</h3>
+                            <p>Логотипы, фирменный стиль и визуальные стратегии. Полный брендбук и гайдлайны для масштабирования.</p>
+                        </span>
+                        <span class="s-card-cta">
+                            <span>СМОТРЕТЬ</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="s-card-shine"></span>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
@@ -309,6 +454,94 @@
                     menuBtn.classList.remove('open');
                 });
             });
+
+            // ===== 3D ARSENAL CARDS: mouse-tracked tilt =====
+            const cards = document.querySelectorAll('.s-card-3d');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isTouch = window.matchMedia('(hover: none)').matches;
+
+            cards.forEach(card => {
+                const accent = card.dataset.accent || '#ff0000';
+                card.style.setProperty('--accent', accent);
+
+                if (reduceMotion || isTouch) return;
+
+                let rafId = null;
+                let targetRX = 0, targetRY = 0, currentRX = 0, currentRY = 0;
+                let mx = 50, my = 50;
+
+                const update = () => {
+                    currentRX += (targetRX - currentRX) * 0.12;
+                    currentRY += (targetRY - currentRY) * 0.12;
+                    card.style.setProperty('--rx', currentRX.toFixed(2) + 'deg');
+                    card.style.setProperty('--ry', currentRY.toFixed(2) + 'deg');
+                    card.style.setProperty('--mx', mx.toFixed(2) + '%');
+                    card.style.setProperty('--my', my.toFixed(2) + '%');
+                    if (Math.abs(targetRX - currentRX) > 0.05 || Math.abs(targetRY - currentRY) > 0.05) {
+                        rafId = requestAnimationFrame(update);
+                    } else {
+                        rafId = null;
+                    }
+                };
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const px = x / rect.width;
+                    const py = y / rect.height;
+                    mx = px * 100;
+                    my = py * 100;
+                    // tilt range ±10 degrees
+                    targetRY = (px - 0.5) * 16;
+                    targetRX = -(py - 0.5) * 16;
+                    if (!rafId) rafId = requestAnimationFrame(update);
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    targetRX = 0;
+                    targetRY = 0;
+                    if (!rafId) rafId = requestAnimationFrame(update);
+                });
+            });
+
+            // ===== HERO 3D LOGO: scroll-driven rotation + pointer parallax =====
+            const hero3d = document.getElementById('hero3d');
+            if (hero3d && !reduceMotion) {
+                const stage = hero3d.querySelector('.hero-3d-stage');
+                let scrollY = window.scrollY || 0;
+                let pointerX = 0;
+                let pointerY = 0;
+                let frame = null;
+
+                const apply = () => {
+                    // base spin from scroll: 0.18deg per pixel scrolled
+                    const spin = scrollY * 0.18;
+                    // gentle tilt from pointer position relative to viewport center
+                    const tiltX = pointerY * 8;
+                    const tiltY = pointerX * 12 + spin;
+                    const lift = Math.min(scrollY * 0.05, 80);
+                    stage.style.transform = `translateY(${-lift}px) rotateX(${-tiltX}deg) rotateY(${tiltY}deg)`;
+                    frame = null;
+                };
+
+                const schedule = () => {
+                    if (!frame) frame = requestAnimationFrame(apply);
+                };
+
+                window.addEventListener('scroll', () => {
+                    scrollY = window.scrollY || 0;
+                    schedule();
+                }, { passive: true });
+
+                window.addEventListener('mousemove', (e) => {
+                    pointerX = (e.clientX / window.innerWidth) - 0.5;
+                    pointerY = (e.clientY / window.innerHeight) - 0.5;
+                    schedule();
+                });
+
+                schedule();
+            }
         });
     </script>
     <script>
