@@ -7,6 +7,7 @@
     <meta name="description" content="Логотипы, фирменный стиль, упаковка и брендбуки. Стратегический дизайн от 360 Production Group.">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="services.css">
     <style>:root { color-scheme: dark; }</style>
@@ -167,7 +168,85 @@
             <div class="svc-tile t4" data-aos="fade-up" data-aos-delay="240"><img src="../test1.JPG" alt="Design case"><span>Брендбук ритейла</span></div>
             <div class="svc-tile t5" data-aos="fade-up" data-aos-delay="320"><img src="../test5.jpg" alt="Design case"><span>SMM-шаблоны</span></div>
         </div>
-    </div>
+            <div class="more-works-cta">
+            <button class="mw-btn" type="button" data-more-works="moreWorksDesign" aria-expanded="false" aria-controls="moreWorksDesign">
+                <span class="mw-label">БОЛЬШЕ РАБОТ</span>
+                <span class="mw-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <div class="more-works" id="moreWorksDesign" aria-hidden="false">
+            <div class="mw-frame">
+                <div class="swiper moreWorksSwiper">
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test2.jpeg" alt="Логотип финтех-стартапа">
+                                    <figcaption>
+                                        <span class="mw-tag">06 / DESIGN</span>
+                                        <h4>Логотип финтех-стартапа</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test4.jpg" alt="Брендбук HoReCa-сети">
+                                    <figcaption>
+                                        <span class="mw-tag">07 / DESIGN</span>
+                                        <h4>Брендбук HoReCa-сети</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test1.jpg" alt="Айдентика для ритейла">
+                                    <figcaption>
+                                        <span class="mw-tag">08 / DESIGN</span>
+                                        <h4>Айдентика для ритейла</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test3.jpeg" alt="Дизайн-система SaaS">
+                                    <figcaption>
+                                        <span class="mw-tag">09 / DESIGN</span>
+                                        <h4>Дизайн-система SaaS</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test5.jpg" alt="Айдентика beauty-бренда">
+                                    <figcaption>
+                                        <span class="mw-tag">10 / DESIGN</span>
+                                        <h4>Айдентика beauty-бренда</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test6.jpg" alt="Гайдлайны мобильного приложения">
+                                    <figcaption>
+                                        <span class="mw-tag">11 / DESIGN</span>
+                                        <h4>Гайдлайны мобильного приложения</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                    </div>
+                </div>
+                <button class="mw-nav mw-prev" type="button" aria-label="Назад">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="mw-nav mw-next" type="button" aria-label="Вперёд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                </button>
+            </div>
+        </div>
+</div>
 </section>
 
 <section class="svc-section">
@@ -203,6 +282,7 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="services.js"></script>
 </body>
