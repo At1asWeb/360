@@ -7,6 +7,7 @@
     <meta name="description" content="Landing page, корпоративные сайты, веб-сервисы и интернет-магазины. Дизайн-система, скорость и адаптив от 360 Production Group.">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="services.css">
     <style>:root { color-scheme: dark; }</style>
@@ -172,7 +173,85 @@
             <div class="svc-tile t4" data-aos="fade-up" data-aos-delay="240"><img src="../test1.JPG" alt="Web case"><span>Личный кабинет</span></div>
             <div class="svc-tile t5" data-aos="fade-up" data-aos-delay="320"><img src="../test3.jpeg" alt="Web case"><span>SaaS-дашборд</span></div>
         </div>
-    </div>
+            <div class="more-works-cta">
+            <button class="mw-btn" type="button" data-more-works="moreWorksWeb" aria-expanded="false" aria-controls="moreWorksWeb">
+                <span class="mw-label">БОЛЬШЕ РАБОТ</span>
+                <span class="mw-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <div class="more-works" id="moreWorksWeb" aria-hidden="false">
+            <div class="mw-frame">
+                <div class="swiper moreWorksSwiper">
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test2.jpeg" alt="Лендинг для IT-стартапа">
+                                    <figcaption>
+                                        <span class="mw-tag">06 / WEB</span>
+                                        <h4>Лендинг для IT-стартапа</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test1.jpg" alt="Корпоративный сайт девелопера">
+                                    <figcaption>
+                                        <span class="mw-tag">07 / WEB</span>
+                                        <h4>Корпоративный сайт девелопера</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test3.jpeg" alt="E-commerce с собственной CMS">
+                                    <figcaption>
+                                        <span class="mw-tag">08 / WEB</span>
+                                        <h4>E-commerce с собственной CMS</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test4.jpg" alt="Каталог бренда премиум-сегмента">
+                                    <figcaption>
+                                        <span class="mw-tag">09 / WEB</span>
+                                        <h4>Каталог бренда премиум-сегмента</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test5.jpg" alt="Личный кабинет SaaS-сервиса">
+                                    <figcaption>
+                                        <span class="mw-tag">10 / WEB</span>
+                                        <h4>Личный кабинет SaaS-сервиса</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="../test6.jpg" alt="Мобильная веб-витрина бутика">
+                                    <figcaption>
+                                        <span class="mw-tag">11 / WEB</span>
+                                        <h4>Мобильная веб-витрина бутика</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                    </div>
+                </div>
+                <button class="mw-nav mw-prev" type="button" aria-label="Назад">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="mw-nav mw-next" type="button" aria-label="Вперёд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                </button>
+            </div>
+        </div>
+</div>
 </section>
 
 <section class="svc-section">
@@ -208,6 +287,7 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="services.js"></script>
 </body>

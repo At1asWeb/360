@@ -69,20 +69,74 @@
         </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about-pro">
+        <div class="about-bg" aria-hidden="true">
+            <span class="about-grid"></span>
+            <span class="about-orb about-orb-1"></span>
+            <span class="about-orb about-orb-2"></span>
+        </div>
         <div class="container">
-            <div class="about-flex">
-                <div class="about-title" data-aos="fade-up">
-                    <h2>КТО ТАКИЕ <span class="outline">360<span>°</span></span></h2>
-                </div>
-                <div class="about-text" data-aos="fade-up">
-                    <p>Мы объединили под одной крышей цех наружной рекламы, типографию и отдел разработки сайтов. Наш стиль - это дерзость, подкрепленная собственным производством.</p>
-                    <div class="stats">
-                        <div class="stat-item"><b>100%</b><span>Качество</span></div>
-                        <div class="stat-item"><b>360°</b><span>Подход</span></div>
-                    </div>
-                </div>
+            <div class="about-head">
+                <span class="about-kicker" data-aos="fade-up">// о нас</span>
+                <h2 class="about-headline" data-aos="fade-up">
+                    <span class="line">КТО ТАКИЕ</span>
+                    <span class="line accent">360<span class="deg">°</span></span>
+                </h2>
+                <p class="about-lead" data-aos="fade-up">
+                    Объединили под одной крышей цех наружной рекламы, типографию и отдел разработки. Один менеджер, своё производство, прозрачные сроки — без подрядчиков-посредников.
+                </p>
             </div>
+
+            <ul class="about-stats" id="aboutStats" role="list">
+                <li class="stat-card" data-aos="fade-up">
+                    <div class="stat-card-inner">
+                        <span class="stat-corner" aria-hidden="true"></span>
+                        <span class="stat-label">// качество</span>
+                        <b class="stat-value" data-counter="100" data-suffix="%">0<span class="suf">%</span></b>
+                        <span class="stat-meta">Сдача проекта без правок</span>
+                    </div>
+                </li>
+                <li class="stat-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="stat-card-inner">
+                        <span class="stat-corner" aria-hidden="true"></span>
+                        <span class="stat-label">// подход</span>
+                        <b class="stat-value" data-counter="360" data-suffix="°">0<span class="suf">°</span></b>
+                        <span class="stat-meta">Дизайн → производство → запуск</span>
+                    </div>
+                </li>
+                <li class="stat-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="stat-card-inner">
+                        <span class="stat-corner" aria-hidden="true"></span>
+                        <span class="stat-label">// проекты</span>
+                        <b class="stat-value" data-counter="250" data-suffix="+">0<span class="suf">+</span></b>
+                        <span class="stat-meta">Сданы под ключ за 8 лет</span>
+                    </div>
+                </li>
+                <li class="stat-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="stat-card-inner">
+                        <span class="stat-corner" aria-hidden="true"></span>
+                        <span class="stat-label">// команда</span>
+                        <b class="stat-value" data-counter="24" data-suffix="">0<span class="suf"></span></b>
+                        <span class="stat-meta">Дизайнеры, монтажники, разрабы</span>
+                    </div>
+                </li>
+                <li class="stat-card" data-aos="fade-up" data-aos-delay="320">
+                    <div class="stat-card-inner">
+                        <span class="stat-corner" aria-hidden="true"></span>
+                        <span class="stat-label">// тираж</span>
+                        <b class="stat-value" data-counter="120" data-suffix="K">0<span class="suf">K</span></b>
+                        <span class="stat-meta">Метров печати в год</span>
+                    </div>
+                </li>
+                <li class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card-inner">
+                        <span class="stat-corner" aria-hidden="true"></span>
+                        <span class="stat-label">// поддержка</span>
+                        <b class="stat-value" data-counter="24" data-suffix="/7">0<span class="suf">/7</span></b>
+                        <span class="stat-meta">Менеджер на связи</span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -133,6 +187,86 @@
             </div>
             <div class="swiper-button-next custom-nav"></div>
             <div class="swiper-button-prev custom-nav"></div>
+        </div>
+        <div class="container">
+            <div class="more-works-cta">
+                <button class="mw-btn" type="button" data-more-works="moreWorksHome" aria-expanded="false" aria-controls="moreWorksHome">
+                    <span class="mw-label">БОЛЬШЕ РАБОТ</span>
+                    <span class="mw-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="more-works" id="moreWorksHome" aria-hidden="false">
+                <div class="mw-frame">
+                    <div class="swiper moreWorksSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="test1.jpg" alt="Кейс 07">
+                                    <figcaption>
+                                        <span class="mw-tag">07 / OUTDOOR</span>
+                                        <h4>Световая вывеска ритейл-сети</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="test2.jpeg" alt="Кейс 08">
+                                    <figcaption>
+                                        <span class="mw-tag">08 / WEB</span>
+                                        <h4>Корпоративный сайт девелопера</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="test3.jpeg" alt="Кейс 09">
+                                    <figcaption>
+                                        <span class="mw-tag">09 / PRINT</span>
+                                        <h4>Каталог премиум-коллекции</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="test1.JPG" alt="Кейс 10">
+                                    <figcaption>
+                                        <span class="mw-tag">10 / OUTDOOR</span>
+                                        <h4>Объёмные буквы для бизнес-центра</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="test2.jpeg" alt="Кейс 11">
+                                    <figcaption>
+                                        <span class="mw-tag">11 / WEB</span>
+                                        <h4>Лендинг для IT-стартапа</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="mw-card">
+                                    <img src="test3.jpeg" alt="Кейс 12">
+                                    <figcaption>
+                                        <span class="mw-tag">12 / PRINT</span>
+                                        <h4>Брендбук food-сети</h4>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mw-nav mw-prev" type="button" aria-label="Назад">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="mw-nav mw-next" type="button" aria-label="Вперёд">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -665,6 +799,72 @@
                     stepsSection.classList.add('in-view');
                 }
             }
+
+            // ===== ABOUT: count-up stats when section enters viewport =====
+            const statValues = document.querySelectorAll('.stat-value[data-counter]');
+            const animateCount = (el) => {
+                const target = parseInt(el.dataset.counter, 10) || 0;
+                const suffix = el.dataset.suffix || '';
+                if (reduceMotion) {
+                    el.innerHTML = target + (suffix ? `<span class="suf">${suffix}</span>` : '');
+                    return;
+                }
+                const duration = 1600;
+                const startTs = performance.now();
+                const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+                const tick = (now) => {
+                    const p = Math.min((now - startTs) / duration, 1);
+                    const value = Math.round(target * easeOut(p));
+                    el.innerHTML = value + (suffix ? `<span class="suf">${suffix}</span>` : '');
+                    if (p < 1) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+            };
+
+            if (statValues.length) {
+                if ('IntersectionObserver' in window) {
+                    const statsObserver = new IntersectionObserver((entries, obs) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                animateCount(entry.target);
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.55 });
+                    statValues.forEach((el) => statsObserver.observe(el));
+                } else {
+                    statValues.forEach(animateCount);
+                }
+            }
+
+            // ===== MORE WORKS: reveal extra cases gallery on click =====
+            document.querySelectorAll('[data-more-works]').forEach((btn) => {
+                const targetId = btn.getAttribute('data-more-works');
+                const target = document.getElementById(targetId);
+                if (!target) return;
+                btn.addEventListener('click', () => {
+                    const isOpen = target.classList.toggle('is-open');
+                    btn.classList.toggle('is-open', isOpen);
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    btn.querySelector('.mw-label').textContent = isOpen ? 'СВЕРНУТЬ' : 'БОЛЬШЕ РАБОТ';
+                    if (isOpen && window.Swiper && !target.dataset.swiperInited) {
+                        new Swiper(target.querySelector('.moreWorksSwiper'), {
+                            slidesPerView: 1,
+                            spaceBetween: 18,
+                            loop: true,
+                            navigation: {
+                                nextEl: target.querySelector('.mw-next'),
+                                prevEl: target.querySelector('.mw-prev'),
+                            },
+                            breakpoints: {
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 }
+                            }
+                        });
+                        target.dataset.swiperInited = '1';
+                    }
+                });
+            });
         });
     </script>
     <script>

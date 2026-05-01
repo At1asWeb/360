@@ -57,4 +57,34 @@ document.addEventListener('DOMContentLoaded', function () {
             card.style.transform = '';
         });
     });
+
+    // ===== MORE WORKS: reveal extra cases slider on click =====
+    document.querySelectorAll('[data-more-works]').forEach((btn) => {
+        const targetId = btn.getAttribute('data-more-works');
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        btn.addEventListener('click', () => {
+            const isOpen = target.classList.toggle('is-open');
+            btn.classList.toggle('is-open', isOpen);
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const label = btn.querySelector('.mw-label');
+            if (label) label.textContent = isOpen ? 'СВЕРНУТЬ' : 'БОЛЬШЕ РАБОТ';
+            if (isOpen && window.Swiper && !target.dataset.swiperInited) {
+                new Swiper(target.querySelector('.moreWorksSwiper'), {
+                    slidesPerView: 1,
+                    spaceBetween: 18,
+                    loop: true,
+                    navigation: {
+                        nextEl: target.querySelector('.mw-next'),
+                        prevEl: target.querySelector('.mw-prev'),
+                    },
+                    breakpoints: {
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    }
+                });
+                target.dataset.swiperInited = '1';
+            }
+        });
+    });
 });
