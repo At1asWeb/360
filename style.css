@@ -251,31 +251,37 @@ body {
     border-radius: 2px;
 }
 
-/* Мобильный переключатель */
-.menu-toggle { 
-    display: none; 
-    background: none; 
-    border: none; 
-    cursor: pointer; 
-    position: relative; 
-    width: 30px; 
-    height: 20px; 
-    z-index: 1001; 
+/* Мобильный переключатель (3 полоски) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 32px;
+    height: 22px;
+    z-index: 1001;
 }
 
-.menu-toggle span { 
-    display: block; 
-    position: absolute; 
-    height: 3px; 
-    width: 100%; 
-    background: white; 
-    transition: .3s ease-in-out; 
+.menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    left: 0;
+    transition: transform 0.4s cubic-bezier(.22,.65,.3,1), opacity 0.3s, top 0.3s, bottom 0.3s, width 0.3s;
 }
 
-.menu-toggle span:first-child { top: 0; }
-.menu-toggle span:last-child { bottom: 0; }
-.menu-toggle.open span:first-child { transform: rotate(45deg); top: 9px; }
-.menu-toggle.open span:last-child { transform: rotate(-45deg); bottom: 8px; }
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); width: 80%; }
+.menu-toggle span:nth-child(3) { bottom: 0; width: 60%; }
+.menu-toggle:hover span:nth-child(2),
+.menu-toggle:hover span:nth-child(3) { width: 100%; }
+.menu-toggle.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); width: 100%; }
 
 /* --- HERO SECTION --- */
 .hero {
@@ -1812,24 +1818,135 @@ body {
     50% { transform: scale(1.08); }
 }
 
-/* --- ФУТЕР (СТРОГО ПО ЦЕНТРУ) --- */
-.footer { 
-    padding: 60px 0; 
-    background: #050505; 
-    border-top: 1px solid #111; 
+/* --- ФУТЕР (премиум, с контактами и соцсетями) --- */
+.footer {
+    position: relative;
+    padding: 80px 0 40px;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 0, 0, 0.08), transparent 55%),
+        #050505;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
 }
 
-.footer-container { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    gap: 15px; 
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 700px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.55), transparent);
 }
 
-.footer p { 
-    color: #555; 
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 28px;
+    padding: 0 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container .logo {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 28px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.footer-container .logo span { color: var(--red); }
+
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-mail {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #cfcfcf;
+    text-decoration: none;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 999px;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.footer-mail svg { width: 16px; height: 16px; color: var(--red); }
+.footer-mail:hover {
+    border-color: var(--red);
+    color: #fff;
+    background: rgba(255, 0, 0, 0.06);
+}
+
+.footer-socials {
+    display: inline-flex;
+    gap: 12px;
+}
+
+.footer-social {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #cfcfcf;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.4s cubic-bezier(.22,.65,.3,1), border-color 0.3s, color 0.3s, background 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+.footer-social svg { width: 18px; height: 18px; }
+.footer-social .footer-social-letter {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.footer-social:hover {
+    color: #fff;
+    border-color: var(--red);
+    background: var(--red);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(255, 0, 0, 0.32);
+}
+
+.footer-divider {
+    width: 100%;
+    max-width: 720px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.10), transparent);
+}
+
+@media (max-width: 540px) {
+    .footer { padding: 60px 0 32px; }
+    .footer-container { gap: 22px; }
+    .footer-container .logo { font-size: 24px; }
+    .footer-contact { gap: 18px; flex-direction: column; }
+    .footer-mail { font-size: 11px; padding: 9px 16px; letter-spacing: 1.5px; }
+    .footer-social { width: 38px; height: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-social, .footer-mail { transition: none !important; }
+    .footer-social:hover { transform: none; }
+}
+@media (hover: none) {
+    .footer-social:hover { transform: none; }
+}
+
+.footer p {
+    color: #6a6a6a;
     font-size: 11px; 
     margin: 0; 
 }
@@ -1882,20 +1999,41 @@ body {
     .services-grid-3d { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
     .s-card-3d { height: 300px; }
 
-    .hero-3d {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        opacity: 0.32;
-        z-index: 0;
+    /* Hero на планшетах: 3D-эмблема вынесена в поток над текстом, без overlay'а под текст */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        padding: 110px 5% 80px;
+        gap: 28px;
     }
-    .hero-content { z-index: 2; position: relative; }
-    .hero-3d-stage { width: min(440px, 78vw); }
+    .hero-content {
+        z-index: 2;
+        position: relative;
+        order: 2;
+        width: 100%;
+    }
+    .hero-3d {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        opacity: 1;
+        z-index: 1;
+        order: 1;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0;
+    }
+    .hero-3d::before { background: none; }
+    .hero-3d-stage { width: min(280px, 60vw); }
 
     .hero-overlay {
         background:
-            linear-gradient(0deg, rgba(0, 0, 0, 0.82) 18%, rgba(0, 0, 0, 0.48) 100%),
-            radial-gradient(circle at 50% 72%, rgba(255, 0, 0, 0.1), transparent 34%);
+            linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.10) 100%),
+            radial-gradient(circle at 50% 35%, rgba(255, 0, 0, 0.08), transparent 40%);
     }
 
     .hero p { margin-left: auto; margin-right: auto; }
@@ -1905,7 +2043,7 @@ body {
 
 
     .s-card { text-align: center; }
-    .s-card-3d { text-align: left; }
+    .s-card-3d { text-align: center; }
 
     .form-wrapper {
         grid-template-columns: 1fr;
@@ -1946,13 +2084,13 @@ body {
     /* Keep Arsenal as 2 columns on small tablets — drop to 1 column only below 640px */
     .s-card-icon { width: 48px; height: 48px; padding: 10px; }
 
-    /* Hero 3D simplification on tablet/mobile — drop visual noise so text reads first */
-    .hero-3d { opacity: 0.22; }
+    /* Hero 3D на мобиле — компактная эмблема над заголовком, без шумных колец */
+    .hero-3d { opacity: 1; }
     .hero-3d-rings .r2,
     .hero-3d-rings .r3 { display: none; }
-    .hero-3d-glow { opacity: 0.5; }
-    .hero-3d-stage { width: min(360px, 76vw); }
-    .hero h1 { font-size: clamp(40px, 13vw, 80px); }
+    .hero-3d-glow { opacity: 0.7; }
+    .hero-3d-stage { width: min(240px, 58vw); }
+    .hero h1 { font-size: clamp(36px, 12vw, 72px); }
     
     .form-wrapper { 
         clip-path: none;
@@ -2063,9 +2201,9 @@ body {
     .s-card-index { font-size: 92px; bottom: -10px; right: 10px; opacity: 0.55; }
     .s-card-cta span { font-size: 11px; letter-spacing: 2.5px; }
 
-    /* Pull hero 3D logo back further on small screens */
-    .hero-3d { opacity: 0.16; }
-    .hero-3d-stage { width: min(280px, 70vw); }
+    /* Hero 3D — компактная эмблема (стоящая над заголовком) на маленьких экранах */
+    .hero-3d { opacity: 1; }
+    .hero-3d-stage { width: min(200px, 50vw); }
 
     .form-wrapper {
         padding: 22px 14px 20px;
@@ -2287,4 +2425,103 @@ body {
     .mw-btn:hover { transform: none; }
     .mw-card:hover { transform: none; }
     .mw-card:hover img { transform: none; }
+}
+
+/* ==========================================================================
+   SMOOTH SECTION TRANSITIONS (мягкие переходы между блоками)
+   ========================================================================== */
+:root {
+    --section-fade: 120px;
+}
+
+/* HERO -> ABOUT: мягкий низ hero */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--section-fade);
+    background: linear-gradient(to bottom, transparent, #050505 92%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ABOUT и STEPS — фейды сверху/снизу: основной z-index наверху, фоновые orb'ы внутри */
+.about-pro::before,
+.about-pro::after,
+.steps-3d::before,
+.steps-3d::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--section-fade);
+    pointer-events: none;
+    z-index: 0;
+}
+.about-pro::before,
+.steps-3d::before {
+    top: 0;
+    background: linear-gradient(to bottom, #000 0%, transparent 100%);
+}
+.about-pro::after,
+.steps-3d::after {
+    bottom: 0;
+    background: linear-gradient(to top, #000 0%, transparent 100%);
+}
+
+/* PORTFOLIO / REVIEWS: тонкие фейды по краям */
+.portfolio::before,
+.portfolio::after,
+.reviews::before,
+.reviews::after,
+.services::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 90px;
+    pointer-events: none;
+    z-index: 1;
+}
+.portfolio { position: relative; }
+.portfolio::before { top: 0; background: linear-gradient(to bottom, #050505, transparent); }
+.portfolio::after  { bottom: 0; background: linear-gradient(to top, #050505, transparent); }
+
+.reviews::before { top: 0; background: linear-gradient(to bottom, #050505, transparent); }
+.reviews::after  { bottom: 0; background: linear-gradient(to top, #050505, transparent); }
+
+.services::after { bottom: 0; background: linear-gradient(to top, #050505 0%, transparent 100%); }
+
+/* MORE WORKS — фрейм мягко выходит из секции */
+.more-works.is-open .mw-frame { backdrop-filter: blur(2px); }
+
+@media (max-width: 768px) {
+    :root { --section-fade: 80px; }
+    .portfolio::before, .portfolio::after,
+    .reviews::before, .reviews::after,
+    .services::after { height: 60px; }
+}
+
+/* --- Arsenal cards: вертикально-центрированный контент на мобиле --- */
+@media (max-width: 768px) {
+    .s-card-inner {
+        text-align: center;
+        align-content: center;
+        justify-items: center;
+        grid-template-rows: auto auto auto auto auto;
+        gap: 12px;
+        padding: 32px 22px 28px;
+    }
+    .s-card-icon { margin: 0 auto; }
+    .s-card-tag { margin-bottom: 4px; }
+    .s-card-3d h3 { margin-bottom: 6px; }
+    .s-card-3d p { max-width: 36ch; margin-left: auto; margin-right: auto; }
+    .s-card-cta { justify-content: center; align-self: center; }
+    .s-card-index { right: 12px; bottom: -10px; opacity: 0.45; }
+}
+
+@media (max-width: 480px) {
+    .s-card-inner { padding: 28px 18px 24px; gap: 10px; }
 }
