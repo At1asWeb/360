@@ -2126,7 +2126,9 @@ body {
         padding-top: 24px;
     }
 
-    .nav-mobile-mail {
+    /* Префикс .nav-links набивает specificity до 0-2-0,
+       чтобы перебивать .nav-links a (0-1-1) из базовых стилей */
+    .nav-links .nav-mobile-mail {
         display: inline-flex;
         align-items: center;
         gap: 10px;
@@ -2142,8 +2144,8 @@ body {
         transition: border-color 0.3s, color 0.3s, background 0.3s;
         margin: 0;
     }
-    .nav-mobile-mail svg { width: 14px; height: 14px; color: var(--red); }
-    .nav-mobile-mail:hover {
+    .nav-links .nav-mobile-mail svg { width: 14px; height: 14px; color: var(--red); }
+    .nav-links .nav-mobile-mail:hover {
         border-color: var(--red);
         color: #fff;
         background: rgba(255, 0, 0, 0.08);
@@ -2153,7 +2155,7 @@ body {
         display: inline-flex;
         gap: 12px;
     }
-    .nav-mobile-social {
+    .nav-links .nav-mobile-social {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -2166,13 +2168,13 @@ body {
         text-decoration: none;
         margin: 0;
     }
-    .nav-mobile-social svg { width: 16px; height: 16px; }
+    .nav-links .nav-mobile-social svg { width: 16px; height: 16px; }
     .nav-mobile-social-letter {
         font-family: 'Syncopate', sans-serif;
         font-weight: 700;
         font-size: 12px;
     }
-    .nav-mobile-social:hover {
+    .nav-links .nav-mobile-social:hover {
         color: #fff;
         border-color: var(--red);
         background: var(--red);
