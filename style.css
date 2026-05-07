@@ -525,7 +525,7 @@ body {
     100% { transform: translate(-30px, 30px) scale(1.06); }
 }
 
-.about-pro .container { position: relative; z-index: 1; }
+.about-pro .container { position: relative; z-index: 3; }
 
 .about-head {
     display: grid;
@@ -1135,7 +1135,7 @@ body {
     100% { transform: translate(40px, -30px) scale(1.08); }
 }
 
-.steps-3d .container { position: relative; z-index: 1; }
+.steps-3d .container { position: relative; z-index: 3; }
 
 .steps-head {
     text-align: center;
