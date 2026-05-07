@@ -2580,12 +2580,13 @@ body {
         transparent 100%);
 }
 
-/* PORTFOLIO / REVIEWS / SERVICES: плавные фейды по краям */
+/* PORTFOLIO / REVIEWS / SERVICES: плавные фейды по краям.
+   .services::before уже используется выше под декоративные radial-gradient'ы всей секции —
+   сверху секции фейд даёт .portfolio::after, поэтому здесь только ::after */
 .portfolio::before,
 .portfolio::after,
 .reviews::before,
 .reviews::after,
-.services::before,
 .services::after {
     content: "";
     position: absolute;
@@ -2603,8 +2604,7 @@ body {
 .reviews::before { top: 0; background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.7) 45%, transparent 100%); }
 .reviews::after  { bottom: 0; background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.7) 45%, transparent 100%); }
 
-.services::before { top: 0; background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.7) 45%, transparent 100%); }
-.services::after  { bottom: 0; background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.7) 45%, transparent 100%); }
+.services::after { bottom: 0; background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.7) 45%, transparent 100%); }
 
 /* MORE WORKS — фрейм мягко выходит из секции */
 .more-works.is-open .mw-frame { backdrop-filter: blur(2px); }
@@ -2613,7 +2613,7 @@ body {
     :root { --section-fade: 130px; }
     .portfolio::before, .portfolio::after,
     .reviews::before, .reviews::after,
-    .services::before, .services::after { height: 110px; }
+    .services::after { height: 110px; }
 }
 
 /* --- Arsenal cards: вертикально-центрированный контент на мобиле --- */
