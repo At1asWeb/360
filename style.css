@@ -2489,6 +2489,7 @@ body {
 .portfolio::before { top: 0; background: linear-gradient(to bottom, #050505, transparent); }
 .portfolio::after  { bottom: 0; background: linear-gradient(to top, #050505, transparent); }
 
+.reviews { position: relative; }
 .reviews::before { top: 0; background: linear-gradient(to bottom, #050505, transparent); }
 .reviews::after  { bottom: 0; background: linear-gradient(to top, #050505, transparent); }
 
