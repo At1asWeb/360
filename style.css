@@ -2029,6 +2029,8 @@ body {
         order: 2;
         width: 100%;
     }
+    /* На мобиле/планшете прячем "360°" из заголовка — дублирует 3D-лого над ним */
+    .hero h1 .hero-360 { display: none; }
     .hero-3d {
         position: relative;
         inset: auto;
